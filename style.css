@@ -1,0 +1,2506 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1F244E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#preloader p {
+    color: #fff;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+.lazy-bg {
+    transition: background-image 0.5s ease-in-out;
+    background-color: #1F244E;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+select, input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button {
+    background: none;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+}
+
+button:hover, a:hover {
+    opacity: 0.8;
+}
+
+@keyframes example {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.typewriter {
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
+}
+  
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: black; }
+}
+  
+.fade-in {
+    animation: example 1.5s ease-in-out;
+}
+
+.header-container {
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 120px;
+    width: 90%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(31,36,78, 0.6);
+}
+
+.logo {
+    height: 90px;
+    display: block;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.websites-links {
+    width: 240px;
+    text-align: center;
+}
+
+.websites-links a, .header-left span {
+    font-family: "Cormorant SC", serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+.burger-menu svg{
+    margin: 0 0 0 20px;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background-color: #1f244e;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    border-left: 2px solid #fff;
+    z-index: 10000;
+}
+  
+#menu.active {
+    transform: translateX(0%);
+}
+  
+#menu ul {
+    padding: 2rem;
+    padding-top: 3rem;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    list-style: none;
+}
+  
+#menu li {
+    margin-bottom: 1rem;
+}
+  
+#menu li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}  
+
+/* Home */
+
+#home, #rooms, #areas, #about-us, #services, #gallery, #around-hostel, #faq {
+    height: 100vh;
+    min-height: 900px;
+    max-height: 1200px;
+    width: 100%;
+    background-color: #1F244E;
+    position: relative;
+}
+
+.home-top-left {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    padding-top: 140px;
+}
+
+.home-bottom-left {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.home-right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(img/home-bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 64px;
+    width: 80%;
+    max-width: 600px;
+    text-align: start;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.check-availability-form, 
+.room-availability-form-container {
+    width: 80%;
+    padding: 10px 20px;
+    border-left: 3px solid #eaeaea;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.check-availability-form p, 
+.check-availability-box p,
+.room-availability-form-title {
+    font-size: 40px;
+    color: #fff;
+}
+
+.availability-form, 
+#room-availability-form {
+    flex-wrap: wrap;
+    opacity: 0.9;
+}
+
+.availability-form .form-field,
+#room-availability-form .form-field {
+    width: 50%;
+    padding-top: 10px;
+}
+
+.availability-form label, 
+#room-availability-form label {
+    color: #fff;
+    font-size: 24px;
+}
+
+.availability-form select, 
+.availability-form input, 
+#room-availability-form input {
+    width: 90%;
+    height: 50px;
+    background-color: #eaeaea;
+    border: 2px solid #E8B85F;
+    border-radius: 10px;
+    padding: 5px;
+    color: #001826;
+}
+
+.availability-form button, 
+.about-room-btn a, 
+.open-map-btn button, 
+#room-availability-form button {
+    color: #001826;
+    background-color: #E8B85F;
+    padding: 5px;
+    height: 60px;
+    font-size: 32px;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+.availability-form button, 
+#room-availability-form button {
+    width: 100%;
+}
+
+.close-form, .expand-form {
+    position: absolute;
+    right: 10px;
+    width: 90px;
+}
+
+.close-form img, .expand-form img {
+    width: 100%;
+}
+
+.close-form {
+    top: 10px;
+}
+
+.expand-form {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.home-bottom-left.expanded {
+    position: fixed;
+    background-color: #1F244E;
+    z-index: 2000;
+}
+
+
+.check-availability-box {
+    background-color: #1F244E;
+    position: fixed;
+    width: 50%;
+    left: 0;
+    bottom: 120px;
+    z-index: 1000;
+    padding: 20px 0;
+    opacity: 0.7;
+}
+
+.check-availability-box:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.check-availability-box p {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 20px;
+    border-left: 3px solid #fff;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+}
+    
+.subtitle {
+    color: #E8B85F;
+    font-size: 52px;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.home-subtitle {
+    width: 80%;
+    max-width: 600px;
+    border-left: 3px solid #E8B85F;
+    background-color: rgba(31,36,78, 0.6);
+}
+
+/* Rooms */
+
+#rooms, #areas, #around-hostel, #faq {
+    overflow: hidden;
+}
+
+.rooms-left, .areas-right, .around-hostel-right, .faq-right, .faq-left {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rooms-left, .faq-left {
+    left: 0;
+}
+
+.rooms-left div, .areas-right div, .around-hostel-right div, .faq-right-content {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.rooms-right, .areas-left, .around-hostel-left, .faq-left, .faq-right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rooms-right, .faq-right {
+    right: 0;
+}
+
+.rooms-right .room-info-item, .areas-left .area-info-item, .around-hostel-left .location-info-item, .faq-left-content, .faq-right-content {
+    width: 100%;
+    height: 100%;
+    padding-top: 140px;
+}
+
+.room-name, .area-name, .our-story-title, .location-name, .contacts-right .subtitle {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 20px;
+}
+
+.room-description, .area-description, .about-us-left p, .location-description {
+    font-size: 36px;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 20px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-room-btn, .open-map-btn {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 20px;
+}
+
+.about-room-btn a, .open-map-btn button {
+    font-size: 36px;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    width: 100%;
+    color: #001826;
+    display: block;
+}
+
+.controls button {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1000;
+    padding: 0;
+}
+
+.controls img {
+    width: 100%;
+    height: 100%;
+}
+
+.controls button:hover {
+    opacity: 0.8;
+}
+
+button:focus {
+    outline: none;
+}
+
+.controls .down-button {
+    transform: translateX(-100%);
+}
+
+.controls .up-button {
+    transform: translateY(-100%);
+}
+
+/* Areas */
+
+.areas-right, .around-hostel-right {
+    right: 0;
+}
+
+.areas-left, .around-hostel-left {
+    left: 0;
+}
+
+/* Services */ 
+
+#services {
+    height: calc(100vh / 3 * 4);
+    min-height: 1200px;
+    max-height: 1600px
+}
+
+.services-content {
+    width: 100%;
+}
+
+.services-top {
+    height: calc(100vh / 3);
+    min-height: 300px;
+    max-height: 400px;
+}
+
+.services-top-left {
+    padding-top: 140px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.services-items {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: calc(100% / 2);
+    display: flex;
+}
+
+.service-img, .service-name {
+    height: calc(100vh / 3);
+    width: calc(100% / 2);
+    min-height: 300px;
+    max-height: 400px;
+}
+
+
+.service-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #E8B85F;
+}
+
+.service-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-name h3 {
+    text-align: center;
+}
+
+/* About us */
+
+.about-us-left {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    padding-top: 140px;
+    background-image: url(img/about-us.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-us-left button, .gallery-right button {
+    background-color: rgba(31,36,78, 0.4);
+    border: 2px solid #E8B85F;
+    color: #E8B85F;
+    padding: 5px;
+    height: 60px;
+    font-size: 32px;
+    border-radius: 40px;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 600px;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.about-us-right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.custom-nav {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.custom-nav:hover {
+    opacity: 0.6;
+}
+
+.custom-nav img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.reviews-swiper {
+    flex: 1;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-wrapper {
+    height: 100%;
+}
+
+.swiper-slide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review {
+    flex: 1;
+    background-color: #eaeaea;
+    border: 3px solid #E8B85F;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    color: #001826 !important;
+}
+
+.review img {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30%;
+    opacity: 0.7;
+}
+
+.review .review-name {
+    width: 65%;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.review .review-text {
+    font-size: 18px;
+    overflow: hidden;
+    margin: 0;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.review a {
+    color: #001826;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #E8B85F;
+    padding: 5px;
+    border-radius: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Gallery */ 
+
+#gallery {
+    overflow: hidden;
+}
+
+.gallery-left,
+.gallery-right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s ease-in-out;
+}
+
+.gallery-left {
+    left: 0;
+    background-image: url(img/balcony.webp);
+}
+
+.gallery-right {
+    right: 0;
+    background-image: url(img/hostel.webp);
+}
+
+.gallery-right .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 36, 78, 0.7);
+    z-index: 1;
+}
+
+.gallery-right button {
+    position: absolute;
+    top: 50vh;
+    z-index: 2;
+}
+
+/* Around Habibi Hostel */
+
+/* FAQ */
+
+.faq-left .subtitle {
+    width: 80%;
+    max-width: 600px;
+}
+
+.faq-right-content {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #eaeaea;
+    padding-bottom: 40px;
+}
+
+.faq-right-content::-webkit-scrollbar {
+    width: 25px;
+}
+
+.faq-right-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.faq-right-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-right-content:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.faq-item {
+    width: 80%;
+    max-width: 600px;
+    border-left: 3px solid #E8B85F;
+}
+
+.question, .answer {
+    font-size: 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.question, .answer a {
+    color: #E8B85F;
+    font-weight: 600;
+}
+
+.answer {
+    color: #1F244E;
+    font-weight: 500;
+}
+
+.answer a {
+    text-decoration: none;
+}
+
+/* Contacts */ 
+
+#contacts {
+    min-height: 900px;
+    height: 100vh;
+    max-height: 1200px;
+    width: 100%;
+    background-color: #1F244E;
+    position: relative;
+}
+
+.contacts-left, .contacts-right {
+    transition: background-image 1s ease-in-out;
+}
+
+.contacts-left, .contacts-right {
+    position: relative;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding-top: 140px;
+}
+
+.contacts-left {
+    left: 0;
+}
+
+.contacts-right {
+    right: 0;
+}
+
+.contacts-page-info {
+    width: 80%;
+    max-width: 600px;
+}
+
+.contacts-page-info p {
+    font-size: 36px;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.contacts-page-info a {
+    text-decoration: none;
+    color: #E8B85F;
+    font-weight: 600
+}
+
+/* Footer */
+
+.footer {
+    background-color: #EAEAEA;
+    padding: 10px 0;
+    font-family: "Cormorant SC", serif;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    z-index: 999;
+}
+
+.footer-contacts {
+    font-size: 24px;
+}
+
+.footer-contacts p {
+    margin: 0;
+}
+
+.social-media-links {
+    width: 320px;
+}
+  
+.social-media-links a {
+    display: block;
+}
+  
+.social-media-links img {
+    border-radius: 10px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.terms-policy-links {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 18px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.terms-policy-links a {
+    color: #001826;
+}
+
+/* Modal styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+  
+.modal-content {
+    background-color: #1F244E !important;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    font-family: "Cormorant Garamond", serif;
+    color: #001826;
+    line-height: 1.6;
+    font-size: 28px;
+    font-weight: 400;
+    display: block;
+}
+
+.modal-content h2 {
+    font-family: "Cormorant SC", serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #eaeaea;
+    padding: 0;
+}
+
+.modal-text {
+    max-height: 500px;
+    overflow-y: auto;
+    color: #eaeaea;
+}
+
+.close-modal {
+    position: absolute;
+    z-index: 10000;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-modal img {
+    width: 50px;
+        height: 50px;
+}
+  
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#map-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+#map-modal .modal-content {
+    max-width: 80%;
+    display: block;
+}
+
+#map-modal #close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Room page*/
+
+.room-section {
+    background-color: #1F244E;
+    padding-top: 140px;
+    min-height: 100vh;
+    padding-bottom: 140px;
+}
+
+.room-container {
+    width: 100%;
+}
+
+.room-container-left, .room-container-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room-page-title {
+    color: #fff;
+    font-size: 64px;
+    width: 80%;
+    text-align: start;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+    padding: 10px 20px;
+}
+
+.room-main-info {
+    width: 80%;
+    padding: 10px 20px;
+    border-left: 2px solid #E8B85F;
+}
+
+.room-main-info p {
+    font-size: 36px;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #E8B85F;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.facilities {
+    margin-top: 30px;
+    width: 80%;
+    font-size: 24px;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    padding: 0;
+    display: flex;
+}
+
+.facilities ul {
+    width: 50%;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    width: 80%;
+}
+
+.main-photo {
+    width: 100%;
+    max-width: 800px;
+    height: 800px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 6px;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.thumb:hover,
+.thumb.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.room-prices {
+    width: 80%;
+    gap: 20px;
+}
+
+.room-price {
+    font-size: 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #E8B85F;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #E8B85F;  
+}
+
+.extra-services-btn {
+    font-size: 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px 20px;
+    border-radius: 40px;
+    background-color: #E8B85F;  
+}
+
+.extra-services-btn button {
+    color: #001826;
+}
+
+.extra-services-btn:hover {
+    opacity: 0.7;
+}
+
+.room-availability-form-title {
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.room-availability-form-container {
+    margin-top: 30px;
+}
+
+#extra-services-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.services-modal-content {
+    background-color: #1F244E;
+    padding: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    align-items: start;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    position: relative;
+}
+
+.services-modal-content h4 {
+    margin: 0;
+    color: #E8B85F;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.services-modal-content ul {
+    padding-left: 15px;
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: #fff;
+}
+
+.services-modal-content li {
+    font-weight: 500;
+}
+
+.services-modal-content button img {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+}
+
+@media (max-width: 768px) {
+  .thumb {
+    width: 70px;
+    height: 50px;
+  }
+}
+
+/* Gallery page */
+
+.gallery-section {
+    background-color: #1f244e;
+    min-height: 100vh;
+    padding: 120px 0;
+}
+
+.gallery-section .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.gallery-section .gallery-item {
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid #E8B85F;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.gallery-section .gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.modal-gallery {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.9);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    touch-action: pan-y;
+}
+
+.modal-gallery.active {
+    display: flex;
+}
+
+.modal-img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid #E8B85F;
+    border-radius: 6px;
+}
+
+.modal-gallery .close-btn, .modal-gallery .prev-btn, .modal-gallery .next-btn {
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+}
+
+.modal-gallery .close-btn img, .modal-gallery .prev-btn img, .modal-gallery .next-btn img {
+    width: 80px;
+    height: 80px;
+}
+
+.modal-gallery .close-btn {
+    right: 5%;
+}
+
+.modal-gallery .prev-btn {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-gallery .next-btn {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Confirmation page */
+
+#confirmation-page {
+    min-height: 100vh;
+    background-color: #1F244E;
+    color: #fff;
+    padding-bottom: 132px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#confirmation-page h2 {
+    font-size: 48px;
+    font-family: "Cormorant SC", serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+#confirmation-page p {
+    font-size: 32px;
+}
+
+#confirmation-page a {
+    text-decoration: none;
+}
+
+.back {
+    background-color: #E8B85F;
+    font-weight: 500;
+    font-size: 32px;
+    color: #001826;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 40px;
+}
+
+.confirmation-page.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Terms, policy, refund pages */
+
+.terms-section, .policy-section {
+    background-color: #1F244E;
+    min-height: 100vh;
+    padding: 140px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+}
+
+.terms-section-content, .policy-section-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.terms-section .section-title, .policy-section .section-title {
+    max-width: 2000px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.terms-section ul, .terms-section p, .policy-section ul, .policy-section p {
+    font-size: 32px;
+    padding: 0 20px;
+}
+
+.terms-section strong, .policy-section strong {
+    color: #E8B85F;
+}
+
+/* Adaptive styles */
+
+.adaptive {
+    display: none !important;
+}
+
+/* Responsive */
+
+@media (max-width: 1439px) {
+    .header-container {
+        height: 100px;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    #home, #rooms, #areas, #about-us, #services, #gallery, #around-hostel, #faq, #contacts {
+        min-height: 600px;
+        max-height: 900px;
+    }
+
+    .home-top-left, .rooms-right .room-info-item, .areas-left .area-info-item, .around-hostel-left .location-info-item, .faq-left-content, .faq-right-content, .room-section {
+        padding-top: 120px;
+    }
+
+    .section-title, .room-page-title {
+        font-size: 40px;
+        padding: 5px 10px;
+    }
+
+    .check-availability-form, 
+    .check-availability-box p { 
+        padding: 5px 10px;
+    }
+
+    .check-availability-form p, 
+    .check-availability-box p, 
+    .room-availability-form-title {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    .availability-form .form-field, 
+    #room-availability-form .form-field {
+        padding-top: 5px;
+    }
+
+    .availability-form label, 
+    #room-availability-form label {
+        font-size: 20px;
+    }
+
+    .availability-form select, 
+    .availability-form input, 
+    #room-availability-form input {
+        height: 40px;
+    }
+
+    .availability-form button, 
+    .about-room-btn a, 
+    .open-map-btn button, 
+    #room-availability-form button {
+        padding: 5px;
+        height: 45px;
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .subtitle {
+        font-size: 28px;
+        padding: 5px 10px;
+    }
+
+    .check-availability-box {
+        padding: 10px 0;
+    }
+
+    .close-form, .expand-form {
+        position: absolute;
+        width: 60px;
+    }
+
+    .close-form img, .expand-form img {
+        width: 100%;
+    }
+
+    .controls button, .custom-nav img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .room-name, .area-name, .our-story-title, .location-name, .contacts-right .subtitle {
+        padding: 5px 10px;
+    }
+
+    .room-description, .area-description, .about-us-left p, .location-description {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .about-room-btn, .open-map-btn {
+        padding: 5px 10px;
+    }
+
+    #services {
+        min-height: 800px;
+        max-height: 1200px;
+    }
+
+    .services-top, .service-img, .service-name {
+        min-height: 200px;
+        max-height: 300px;
+    }
+
+    .services-top-left {
+        padding-top: 120px;
+    }
+
+    .about-us-right {
+        padding-top: 120px;
+    }
+
+    .about-us-left button, .gallery-right button {
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .swiper-slide .review:last-child {
+        display: none;
+    }
+
+    .custom-nav {
+        width: 70px;
+        height: 70px;
+    }
+
+    .review a {
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .question, .answer {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .contacts-left, .contacts-right {
+        padding-top: 120px;
+    }
+
+    .contacts-page-info p {
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    .footer .container {
+        width: 80%;
+    }
+
+    /* Modal */ 
+
+    .modal-text {
+        max-height: 400px;
+    }
+
+    /* Room page */
+
+    .main-photo {
+        height: 600px;
+    }
+
+    .facilities {
+        font-size: 20px;
+    }
+
+    .room-availability-form-title {
+        padding-bottom: 10px;
+    }
+
+    .room-price, .extra-services-btn {
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+
+    /* Terms, policy pages */ 
+
+    .terms-section ul, .terms-section p, .policy-section ul, .policy-section p {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .desktop {
+        display: none;
+    }
+
+    .burger-menu svg {
+        width: 60px;
+        height: 30px;
+    }
+
+    .burger-menu span {
+        font-size: 28px;
+    }
+
+    #home-adaptive, #about-us-adaptive {
+        display: flex !important;
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .home-adaptive-content, .about-us-adaptive-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .section-title-adaptive, #contacts .section-title {
+        color: #fff;
+        font-size: 48px;
+        font-family: "Cormorant SC", serif;
+        font-style: normal;
+        font-weight: 600;
+        margin: 40px auto 40px 0;
+    }
+
+    .subtitle-adaptive {
+        color: #E8B85F;
+        font-family: "Cormorant Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        margin: 40px 0 40px auto;
+        border-left: 3px solid #E8B85F;
+        font-size: 40px;
+    }
+
+    .section-title-adaptive, .subtitle-adaptive {
+        padding: 5px 10px;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    #home-adaptive .section-title-adaptive, #home-adaptive .subtitle-adaptive {
+        background-color: rgba(31,36,78, 0.4);
+    }
+
+    .check-availability-box {
+        position: fixed;
+        width: 100%;
+        bottom: 100px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .check-availability-box p {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .check-availability-form-adaptive {
+        position: fixed;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        bottom: 0;
+        left: 0;
+        display: none;
+        background-color: #1F244E;
+        min-height: 50vh;
+        z-index: 1000;
+    }
+
+    .check-availability-form {
+        width: 100%;
+        max-width: 1000px;
+
+    }
+
+    .availability-form .form-field {
+        width: 100%;
+    }
+
+    .availability-form label, 
+    #room-availability-form label {
+        font-size: 24px;
+    }
+
+    .availability-form select, 
+    .availability-form input, 
+    #room-availability-form input {
+        height: 50px;
+    }
+
+    .availability-form button {
+        width: 90%;
+        height: 50px;
+        margin-top: 30px;
+    }
+
+    #rooms-adaptive, #areas-adaptive, #around-hostel-adaptive {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        touch-action: pan-y;
+        display: block !important;
+    }
+
+    .main-slide {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    .description {
+        width: 80%;
+        color: #fff;
+        z-index: 2;
+        background-color: rgba(31,36,78, 0.7);
+        border-radius: 10px;
+        padding: 30px 0;
+    }
+
+    .description .section-title-adaptive,  .description .subtitle-adaptive, .description p, .description .about-room-btn, .open-map-btn {
+        margin: 10px auto;
+    }
+
+    .description .subtitle-adaptive {
+        border-left: none;
+    }
+
+    .description p, .about-us-adaptive-top p {
+        font-size: 32px;
+        font-family: "Cormorant Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: #fff;
+        width: 80%;
+        padding: 5px 10px;
+        line-height: 1.2;
+    }
+
+    #rooms-adaptive .description p {
+        min-height: 200px;
+    }
+
+    .about-room-btn a, .open-map-btn button {
+        font-size: 36px;
+        height: 60px;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-btn.prev { left: 10px; }
+    .nav-btn.next { right: 10px; }
+
+    .nav-btn img {
+        width: 100%;
+    }
+
+    #areas-adaptive .description p, #around-hostel-adaptive .description p {
+        min-height: 125px;
+    }
+
+    #services {
+        min-height: 100vh;
+        padding-bottom: 200px;
+        padding-top: 200px;
+        max-height: fit-content;
+    }
+
+    .services-top {
+        display: none;
+    }
+
+    .service-img, .service-name {
+        min-height: 200px;
+        height: calc((100vh - 400px) / 3);
+        max-height: 400px;
+    }
+
+    #about-us {
+        max-height: 4000px;
+        min-height: 200vh;
+    }
+
+    .about-us-left, .about-us-right {
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+        height: 50%;
+    }
+
+    .about-us-left {
+        justify-content: center;
+    }
+
+    .about-us-left, .about-us-right {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    #about-us .section-title {
+        width: 64%;
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    .our-story-title {
+        width: 64%;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .about-us-left p {
+        font-size: 32px;
+        width: 64%;
+    }
+
+    .about-us-left button {
+        width: 64%;
+        height: 70px;
+        font-size: 32px;
+    }
+
+    #about-us .swiper {
+        min-height: 420px;
+    }
+
+    #about-us .swiper-slide {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .review {
+        min-height: 200px;
+    }
+
+    .review .review-name {
+        font-size: 28px;
+    }
+
+    .review .review-text {
+        font-size: 20px;
+    }
+
+    .review a {
+        font-size: 24px;
+    }
+
+    .custom-nav {
+        width: 80px;
+        height: 80px;
+    }
+
+    .custom-nav img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #gallery {
+        height: 100vh;
+        max-height: 2000px;
+        min-height: 300px;
+    }
+
+    .gallery-left, .gallery-right {
+        width: 100%;
+        min-height: 300px;
+        height: 50vh;
+        position: relative;
+    }
+
+    .gallery-left {
+        top: 0;
+    }
+
+    .gallery-right {
+        bottom: 0;
+    }
+
+    .gallery-right button {
+        top: 10%;
+        height: 70px;
+        font-size: 32px;
+        width: 64%;
+    }
+
+    .dark-overlay {
+        height: 50vh;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    #map-modal .modal-content {
+        max-width: 90%;
+    }
+
+    .open-map-btn button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #faq-adaptive {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 200px 0;
+        background-color: #1F244E;
+    }
+
+    #faq-adaptive .section-title-adaptive {
+        width: 64%;
+        margin: 10px 0 30px 0;
+    }
+
+    .faq-section {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-toggle {
+        border-radius: 10px;
+        width: 80%;
+        text-align: left;
+        background-color: #E8B85F;
+        color: #1F244E;
+        font-size: 32px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: bold;
+        padding: 16px 20px;
+        border: none;
+        border-left: 4px solid #1F244E;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .faq-toggle:hover {
+        background-color: #d4a64f;
+    }
+
+    .faq-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background: #ffffff;
+        padding: 0 20px;
+        border-left: 3px solid #E8B85F;
+        margin-bottom: 20px;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .faq-panel.open {
+        max-height: 1000px; /* Достаточно для любых блоков */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .faq-item .question,
+    .faq-item .answer {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+        padding: 5px 0;
+    }
+
+    .faq-item .question {
+        font-weight: 600;
+        color: #E8B85F;
+    }
+
+    .faq-item .answer {
+        color: #1F244E;
+    }
+
+    #contacts {
+        height: 100vh;
+        min-height: 700px;
+        max-height: 2000px;
+        position: relative;
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contacts-left {
+        width: 80%;
+        padding-top: 0;
+    }
+
+    #contacts .section-title {
+        margin: 10px 0 30px 0;
+    }
+
+    .contacts-page-info p {
+        font-size: 32px;
+    }
+
+    .check-availability-form-adaptive {
+        z-index: 100000000000;
+    }
+
+    .footer {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 10000000000 !important;
+    }
+
+    footer .container {
+        justify-content: center !important;
+    }
+
+    .footer-contacts {
+        display: none;
+    }
+
+    .terms-policy-links {
+        margin-top: 5px;
+    }
+
+    /* Room page */ 
+
+    .room-container {
+        flex-wrap: wrap;
+    }
+
+    .room-container-left, .room-container-right, #room-availability-form .form-field {
+        width: 100%;
+    }
+
+    .room-page-title {
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    #room-availability-form input {
+        width: 100%;
+    }
+
+    #room-availability-form button {
+        height: 50px;
+        margin-top: 30px;
+    }
+
+    /* Gallery page */
+
+    .modal-gallery .close-btn img, .modal-gallery .prev-btn img, .modal-gallery .next-btn img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Terms, policy pages */ 
+
+    .terms-section ul, .terms-section p, .policy-section ul, .policy-section p {
+        font-size: 24px;
+    }
+
+    /* Confirmation page */ 
+
+    #confirmation-page p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    #menu {
+        width: 70%;
+    }
+
+    #home-adaptive, #about-us-adaptive, .slide, #services, #faq-adaptive {
+        padding-top: 120px;
+    }
+
+    .section-title-adaptive, #contacts .section-title {
+        font-size: 36px;
+    }
+
+    .subtitle-adaptive {
+        font-size: 32px;
+    }
+
+    .description {
+        padding: 15px 0;
+    }
+
+    #rooms-adaptive .description p, #areas-adaptive .description p, #around-hostel-adaptive .description p {
+        display: none;
+    }
+
+    .nav-btn {
+        width: 70px;
+        height: 60px;
+        top: calc(50% - 40px);
+    }
+
+    #services {
+        padding-bottom: 0;
+        max-height: 2000px;
+        min-height: calc((100vh - 120px) / 3 * 6 + 120px);
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    #services .service-item:nth-child(2), #services .service-item:nth-child(3), #services .service-item:nth-child(6) {
+        flex-direction: row-reverse;
+    }
+
+    .service-img, .service-name {
+        min-height: 160px;
+        height: calc((100vh - 120px) / 3);
+    }
+
+    #about-us .section-title {
+        font-size: 36px;
+    }
+
+    #about-us .subtitle {
+        font-size: 32px;
+    }
+
+    .about-us-left p {
+        font-size: 24px;
+        min-height: 150px;
+        overflow: hidden;
+    }
+
+    .about-us-left button {
+        font-size: 24px;
+    }
+
+    #about-us .swiper {
+        min-height: 320px;
+    }
+
+    .review {
+        min-height: 150px;
+    }
+
+    .review .review-name {
+        font-size: 24px;
+    }
+
+    .review .review-text {
+        font-size: 18px;
+        line-height: 1.2;
+        height: 40px;
+    }
+
+    .review a {
+        font-size: 20px;
+    }
+
+    .custom-nav {
+        width: 70px;
+        height: 70px;
+    }
+
+    .custom-nav img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    #faq-adaptive {
+        padding-bottom: 50px;
+    }
+
+    .nav-btn-review {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-btn-review.prev {
+        left: calc(50% - 32% - 50px); /* чуть левее review */
+    }
+
+    .nav-btn-review.next {
+        right: calc(50% - 32% - 50px); /* чуть правее review */
+    }
+
+    .gallery-left {
+        display: none;
+    }
+
+    .gallery-right {
+        height: 100vh;
+        min-height: 400px;
+    }
+
+    .gallery-right button {
+        top: calc(50vh - 35px);
+        height: 70px;
+        font-size: 24px;
+    }
+
+    #map-modal .modal-content {
+        max-width: 100%;
+    }
+
+    .faq-panel.open {
+        max-height: 2000px;
+    }
+
+    #contacts {
+        padding-top: 120px;
+    }
+
+    .contacts-page-info p {
+        font-size: 24px;
+    }
+
+    .room-prices {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room-price, .extra-services-btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    .services-modal-content ul {
+        font-size: 20px;
+    } 
+
+    .terms-policy-links {
+        font-size: 14px;
+    }
+
+    /* Gallery page */ 
+
+    .gallery-section .gallery-item {
+        max-width: 200px;
+    }
+
+    .modal-gallery .close-btn img, .modal-gallery .prev-btn img, .modal-gallery .next-btn img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Confirmation page */ 
+
+    #confirmation-page h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 60px;
+    }
+
+    .burger-menu span {
+        display: none;
+    }
+
+    #home-adaptive {
+        text-align: center;
+    }
+
+    #availability-form-adaptive {
+        text-align: left;
+    }
+
+    #home-adaptive .subtitle-adaptive {
+        border-left: none;
+    }
+
+    .description .section-title-adaptive, .description .subtitle-adaptive, .description p, .description .about-room-btn, .open-map-btn {
+        margin: 5px 0;
+    }
+
+    .section-title-adaptive, #home-adaptive .subtitle-adaptive, #contacts .section-title {
+        margin: 10px 0;
+    }
+
+    .section-title-adaptive, .subtitle-adaptive {
+        width: 100%;
+    }
+
+    .check-availability-form p, .check-availability-box p {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .check-availability-box {
+        padding: 10px;
+    }
+
+    .availability-form select, .availability-form input, .availability-form button {
+        width: 100%;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .description .section-title-adaptive, .description .subtitle-adaptive, .about-room-btn {
+        width: 80%;
+    }
+
+    .about-room-btn a {
+        height: 70px;
+    }
+
+    .about-room-btn a, .open-map-btn button {
+        font-size: 28px;
+        height: 50px;
+    }
+
+    #about-us .section-title, #about-us .subtitle, .about-us-left p, .about-us-left button  {
+        width: 80%;
+        text-align: center;
+    }
+
+    .review .review-name {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .review a {
+        font-size: 18px;
+    }
+
+    .gallery-right button {
+        width: 80%;
+    }
+
+    #faq-adaptive {
+        text-align: center;
+    }
+
+    #faq-adaptive .section-title-adaptive {
+        width: 80%;
+    }
+
+    .faq-toggle, .faq-panel {
+        width: 100%;
+    }
+
+    .faq-toggle {
+        text-align: center;
+    }
+
+    .faq-panel {
+        text-align: left;
+    }
+
+    .faq-item {
+        width: 100%;
+    }
+
+    #contacts, #contacts .section-title {
+        text-align: center;
+    }
+
+    #contacts .section-title, #contacts .contacts-page-info {
+        width: 100%;
+    }
+
+    .contacts-page-info p {
+        font-size: 20px;
+    }
+
+    .close-modal img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #map-modal #close-btn {
+        top: 0;
+        right: 0;
+    }
+
+    .room-page-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .main-photo {
+        height: 500px;
+    }
+
+    .thumbnails {
+        justify-content: center;
+    }
+
+    .room-main-info p {
+        font-size: 28px;
+    } 
+
+    .room-main-info, .room-availability-form-container {
+        padding: 5px 10px;
+    }
+
+    .facilities {
+        font-size: 16px;
+    }
+
+    .room-availability-form-title {
+        font-size: 24px;
+    }
+
+    .room-prices {
+        padding: 0 10px;
+    }
+
+    .room-price, .extra-services-btn {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .services-modal-content button img {
+        width: 40px;
+    }
+    
+    .services-modal-content h4 {
+        margin-top: 20px;
+    }
+
+    .terms-policy-links {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    /* Gallery page */ 
+
+    .gallery-section .gallery {
+        gap: 5px;
+    }
+
+    .gallery-section .gallery-item {
+        max-width: 140px;
+    }
+
+    /* Terms, policy pages */ 
+
+    .terms-section .section-title, .policy-section .section-title {
+        text-align: center;
+    }
+
+    .terms-section ul, .terms-section p, .policy-section ul, .policy-section p {
+        font-size: 20px;
+    } 
+
+    /* Confirmation page */ 
+
+    .back {
+        font-size: 24px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .close-form, .expand-form {
+        width: 50px;
+    }
+
+        .terms-section .section-title, .policy-section .section-title {
+            font-size: 32px;
+        }
+}

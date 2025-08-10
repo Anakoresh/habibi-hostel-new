@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /*.html$
+
+Allow: /
+
+Sitemap: https://habibihostel.com/sitemap.xml
+
